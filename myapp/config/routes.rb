@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :evaluations
+  resources :movies
   resources :comments
   resources :users
   root  'home#top'
