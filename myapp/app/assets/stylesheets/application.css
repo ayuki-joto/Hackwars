@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+.content {
+    width: 640px;
+    text-align: center;
+    height: 360px;
+    background: #cc0000;
+    margin-top: 30px;
+}
+
+.RadarChart {
+    background: #1b7ccd;
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.button{
+    margin-left: 80px;
+    margin-top: 15px;
+}
+
+.commentList {
+    background: #1f89e2;
+
+}
+
+.form-control {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#commentArea {
+    margin-top: 20px;
+    margin-left: 100px;
+}
+
+.submitbtn {
+    margin-left: 100px;
+}

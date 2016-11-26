@@ -1,8 +1,18 @@
 // CSSを貼り付けてください
 /* 共通レイアウト ================================ */
+html {
+  height: 100%;
+  position: relative;
+}
+
 body {
+  height: 100%;
+  margin: 0;
   padding-top: 80px;
   color: #364a4d;
+}
+.wrapper {
+  min-height: 100%;
 }
 
 ul, li {
@@ -52,18 +62,20 @@ p {
   height: 100px;
   width: 100%;
   background-color: rgba(34, 49, 52, 0.9);
+  padding-top: 10px;
   top: 0;
   right: 0;
   left: 0;
   position: fixed;
-  margin-bottom: 20px;
+  z-index: 20;
+
 }
 
 #logo {
   float: left;
   font-size: 50px;
   color: #fff;
-  padding-top: 12px;
+  padding-top: 30px;
   letter-spacing: -1px;
   font-weight: bold;
 }
@@ -88,7 +100,11 @@ p {
 
 /* フッター ================================ */
 footer {
-  margin-top: 100px;
+  margin-top: 20px;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  padding-left: 30px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #848484;

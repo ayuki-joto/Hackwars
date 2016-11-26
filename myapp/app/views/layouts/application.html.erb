@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>myapp</title>
+  <title><%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <header class="navbar">
+    <div class="container">
+      <div id="logo">School Board</div>
+      <ul class="header-right">
+        <li><%= link_to "ホーム画面", root_path %></li>
+        <li><%= link_to "掲示板", about_path %></li>
+        <li><%= link_to "録画授業", rec_path %></li>
+      </ul>
+    </div>
+  </header>
 </head>
 <body>
-
+<div class="wrapper">
 <%= yield %>
-
+</div>
 </body>
+
+<footer>presented by Genki</footer>
+
 </html>
