@@ -1,5 +1,53 @@
-<h1>New Evaluation</h1>
+<div class="container">
+  <h1>New Evaluation</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Back', evaluations_path %>
+  <%= link_to 'Back', evaluations_path %>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(function(){
+  $('.btn-p1').click(function () {
+    $('#evaluation_perspicuity').val(1);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p2').css("background-color","#111155");
+    $('.btn-p3').css("background-color","#111155");
+    $('.btn-p4').css("background-color","#111155");
+    $('.btn-p5').css("background-color","#111155");
+  });
+  $('.btn-p2').click(function () {
+    $('#evaluation_perspicuity').val(2);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p1').css("background-color","#111155");
+    $('.btn-p3').css("background-color","#111155");
+    $('.btn-p4').css("background-color","#111155");
+    $('.btn-p5').css("background-color","#111155");
+  });
+  $('.btn-p3').click(function () {
+    $('#evaluation_perspicuity').val(3);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p1').css("background-color","#111155");
+    $('.btn-p2').css("background-color","#111155");
+    $('.btn-p4').css("background-color","#111155");
+    $('.btn-p5').css("background-color","#111155");
+  });
+  $('.btn-p4').click(function () {
+    $('#evaluation_perspicuity').val(4);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p1').css("background-color","#111155");
+    $('.btn-p2').css("background-color","#111155");
+    $('.btn-p3').css("background-color","#111155");
+    $('.btn-p5').css("background-color","#111155");
+  });
+  $('.btn-p5').click(function () {
+    $('#evaluation_perspicuity').val(5);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p1').css("background-color","#111155");
+    $('.btn-p2').css("background-color","#111155");
+    $('.btn-p3').css("background-color","#111155");
+    $('.btn-p4').css("background-color","#111155");
+  });
+});
+</script>

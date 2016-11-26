@@ -1,2 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.btn-group {
+  .btn{
+    background-color: #111155;
+    color: #ffffff;
+  }
+}
