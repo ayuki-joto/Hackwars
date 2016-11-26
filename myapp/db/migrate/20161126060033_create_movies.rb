@@ -3,9 +3,9 @@ class CreateMovies < ActiveRecord::Migration
     create_table :movies do |t|
       t.string :name
       t.string :subject
-      t.string :school-type
+      t.string :schooltype
       t.string :school
-      t.integer :school-grade
+      t.integer :schoolgrade
       t.text :content
 
       t.timestamps null: false
