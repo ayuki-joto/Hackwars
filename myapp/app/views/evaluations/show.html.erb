@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Perspicuity:</strong>
+  <%= @evaluation.perspicuity %>
+</p>
+
+<p>
+  <strong>Device:</strong>
+  <%= @evaluation.device %>
+</p>
+
+<p>
+  <strong>Voice:</strong>
+  <%= @evaluation.voice %>
+</p>
+
+<p>
+  <strong>Concern:</strong>
+  <%= @evaluation.concern %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @evaluation.speed %>
+</p>
+
+<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
+<%= link_to 'Back', evaluations_path %>
