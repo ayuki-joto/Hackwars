@@ -1,5 +1,219 @@
-<h1>New Evaluation</h1>
+<div class="container">
+  <h1>New Evaluation</h1>
 
-<%= render 'form' %>
+  <div class='center'>
+    <%= render 'form' %>
+  </div>
 
-<%= link_to 'Back', evaluations_path %>
+  <%= link_to 'Back', evaluations_path %>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+$(function(){
+  $('.btn-p1').click(function () {
+    $('#evaluation_perspicuity').val(1);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p2').css("background-color","#111155");
+    $('.btn-p3').css("background-color","#111155");
+    $('.btn-p4').css("background-color","#111155");
+    $('.btn-p5').css("background-color","#111155");
+  });
+  $('.btn-p2').click(function () {
+    $('#evaluation_perspicuity').val(2);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p1').css("background-color","#111155");
+    $('.btn-p3').css("background-color","#111155");
+    $('.btn-p4').css("background-color","#111155");
+    $('.btn-p5').css("background-color","#111155");
+  });
+  $('.btn-p3').click(function () {
+    $('#evaluation_perspicuity').val(3);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p1').css("background-color","#111155");
+    $('.btn-p2').css("background-color","#111155");
+    $('.btn-p4').css("background-color","#111155");
+    $('.btn-p5').css("background-color","#111155");
+  });
+  $('.btn-p4').click(function () {
+    $('#evaluation_perspicuity').val(4);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p1').css("background-color","#111155");
+    $('.btn-p2').css("background-color","#111155");
+    $('.btn-p3').css("background-color","#111155");
+    $('.btn-p5').css("background-color","#111155");
+  });
+  $('.btn-p5').click(function () {
+    $('#evaluation_perspicuity').val(5);
+    $(this).css("background-color","#8888ee");
+    $('.btn-p1').css("background-color","#111155");
+    $('.btn-p2').css("background-color","#111155");
+    $('.btn-p3').css("background-color","#111155");
+    $('.btn-p4').css("background-color","#111155");
+  });
+
+  $('.btn-d1').click(function () {
+    $('#evaluation_device').val(1);
+    $(this).css("background-color","#8888ee");
+    $('.btn-d2').css("background-color","#111155");
+    $('.btn-d3').css("background-color","#111155");
+    $('.btn-d4').css("background-color","#111155");
+    $('.btn-d5').css("background-color","#111155");
+  });
+  $('.btn-d2').click(function () {
+    $('#evaluation_device').val(2);
+    $(this).css("background-color","#8888ee");
+    $('.btn-d1').css("background-color","#111155");
+    $('.btn-d3').css("background-color","#111155");
+    $('.btn-d4').css("background-color","#111155");
+    $('.btn-d5').css("background-color","#111155");
+  });
+  $('.btn-d3').click(function () {
+    $('#evaluation_device').val(3);
+    $(this).css("background-color","#8888ee");
+    $('.btn-d1').css("background-color","#111155");
+    $('.btn-d2').css("background-color","#111155");
+    $('.btn-d4').css("background-color","#111155");
+    $('.btn-d5').css("background-color","#111155");
+  });
+  $('.btn-d4').click(function () {
+    $('#evaluation_device').val(4);
+    $(this).css("background-color","#8888ee");
+    $('.btn-d1').css("background-color","#111155");
+    $('.btn-d2').css("background-color","#111155");
+    $('.btn-d3').css("background-color","#111155");
+    $('.btn-d5').css("background-color","#111155");
+  });
+  $('.btn-d5').click(function () {
+    $('#evaluation_device').val(5);
+    $(this).css("background-color","#8888ee");
+    $('.btn-d1').css("background-color","#111155");
+    $('.btn-d2').css("background-color","#111155");
+    $('.btn-d3').css("background-color","#111155");
+    $('.btn-d4').css("background-color","#111155");
+  });
+
+  $('.btn-v1').click(function () {
+    $('#evaluation_voice').val(1);
+    $(this).css("background-color","#8888ee");
+    $('.btn-v2').css("background-color","#111155");
+    $('.btn-v3').css("background-color","#111155");
+    $('.btn-v4').css("background-color","#111155");
+    $('.btn-v5').css("background-color","#111155");
+  });
+  $('.btn-v2').click(function () {
+    $('#evaluation_voice').val(2);
+    $(this).css("background-color","#8888ee");
+    $('.btn-v1').css("background-color","#111155");
+    $('.btn-v3').css("background-color","#111155");
+    $('.btn-v4').css("background-color","#111155");
+    $('.btn-v5').css("background-color","#111155");
+  });
+  $('.btn-v3').click(function () {
+    $('#evaluation_voice').val(3);
+    $(this).css("background-color","#8888ee");
+    $('.btn-v1').css("background-color","#111155");
+    $('.btn-v2').css("background-color","#111155");
+    $('.btn-v4').css("background-color","#111155");
+    $('.btn-v5').css("background-color","#111155");
+  });
+  $('.btn-v4').click(function () {
+    $('#evaluation_voice').val(4);
+    $(this).css("background-color","#8888ee");
+    $('.btn-v1').css("background-color","#111155");
+    $('.btn-v2').css("background-color","#111155");
+    $('.btn-v3').css("background-color","#111155");
+    $('.btn-v5').css("background-color","#111155");
+  });
+  $('.btn-v5').click(function () {
+    $('#evaluation_voice').val(5);
+    $(this).css("background-color","#8888ee");
+    $('.btn-v1').css("background-color","#111155");
+    $('.btn-v2').css("background-color","#111155");
+    $('.btn-v3').css("background-color","#111155");
+    $('.btn-v4').css("background-color","#111155");
+  });
+
+  $('.btn-c1').click(function () {
+    $('#evaluation_concern').val(1);
+    $(this).css("background-color","#8888ee");
+    $('.btn-c2').css("background-color","#111155");
+    $('.btn-c3').css("background-color","#111155");
+    $('.btn-c4').css("background-color","#111155");
+    $('.btn-c5').css("background-color","#111155");
+  });
+  $('.btn-c2').click(function () {
+    $('#evaluation_concern').val(2);
+    $(this).css("background-color","#8888ee");
+    $('.btn-c1').css("background-color","#111155");
+    $('.btn-c3').css("background-color","#111155");
+    $('.btn-c4').css("background-color","#111155");
+    $('.btn-c5').css("background-color","#111155");
+  });
+  $('.btn-c3').click(function () {
+    $('#evaluation_concern').val(3);
+    $(this).css("background-color","#8888ee");
+    $('.btn-c1').css("background-color","#111155");
+    $('.btn-c2').css("background-color","#111155");
+    $('.btn-c4').css("background-color","#111155");
+    $('.btn-c5').css("background-color","#111155");
+  });
+  $('.btn-c4').click(function () {
+    $('#evaluation_concern').val(4);
+    $(this).css("background-color","#8888ee");
+    $('.btn-c1').css("background-color","#111155");
+    $('.btn-c2').css("background-color","#111155");
+    $('.btn-c3').css("background-color","#111155");
+    $('.btn-c5').css("background-color","#111155");
+  });
+  $('.btn-c5').click(function () {
+    $('#evaluation_concern').val(5);
+    $(this).css("background-color","#8888ee");
+    $('.btn-c1').css("background-color","#111155");
+    $('.btn-c2').css("background-color","#111155");
+    $('.btn-c3').css("background-color","#111155");
+    $('.btn-c4').css("background-color","#111155");
+  });
+
+  $('.btn-s1').click(function () {
+    $('#evaluation_speed').val(1);
+    $(this).css("background-color","#8888ee");
+    $('.btn-s2').css("background-color","#111155");
+    $('.btn-s3').css("background-color","#111155");
+    $('.btn-s4').css("background-color","#111155");
+    $('.btn-s5').css("background-color","#111155");
+  });
+  $('.btn-s2').click(function () {
+    $('#evaluation_speed').val(2);
+    $(this).css("background-color","#8888ee");
+    $('.btn-s1').css("background-color","#111155");
+    $('.btn-s3').css("background-color","#111155");
+    $('.btn-s4').css("background-color","#111155");
+    $('.btn-s5').css("background-color","#111155");
+  });
+  $('.btn-s3').click(function () {
+    $('#evaluation_speed').val(3);
+    $(this).css("background-color","#8888ee");
+    $('.btn-s1').css("background-color","#111155");
+    $('.btn-s2').css("background-color","#111155");
+    $('.btn-s4').css("background-color","#111155");
+    $('.btn-s5').css("background-color","#111155");
+  });
+  $('.btn-s4').click(function () {
+    $('#evaluation_speed').val(4);
+    $(this).css("background-color","#8888ee");
+    $('.btn-s1').css("background-color","#111155");
+    $('.btn-s2').css("background-color","#111155");
+    $('.btn-s3').css("background-color","#111155");
+    $('.btn-s5').css("background-color","#111155");
+  });
+  $('.btn-s5').click(function () {
+    $('#evaluation_speed').val(5);
+    $(this).css("background-color","#8888ee");
+    $('.btn-s1').css("background-color","#111155");
+    $('.btn-s2').css("background-color","#111155");
+    $('.btn-s3').css("background-color","#111155");
+    $('.btn-s4').css("background-color","#111155");
+  });
+});
+</script>
