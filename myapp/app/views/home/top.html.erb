@@ -1,13 +1,56 @@
-<header class="navbar">
-  <div class="container">
-    <div id="logo">School Board</div>
-    <ul class="header-right">
-      <li><%= link_to "ホーム画面", root_path %></li>
-      <li><%= link_to "掲示板", about_path %></li>
-      <li><%= link_to "録画授業", root_path %></li>
-    </ul>
+<% provide(:title, "TOP") %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-7 content">skyway</div>
+    <div class="col-xs-5 RadarChart">評価グラフ</div>
+    <button type="button" class="btn btn-primary btn-lg active button">Primary button</button>
   </div>
-</header>
+</div>
 
-<h1></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 commentList">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
 
+  </div>
+</div>
+
+<form>
+  <div class="form-group">
+    <label id="commentArea">Comment</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary submitbtn">送信</button>
+</form>

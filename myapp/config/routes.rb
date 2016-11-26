@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :comments
   resources :users
   root  'home#top'
+  get '/rec' =>'home#rec'
   get '/about'=>'home#about'
 
   # The priority is based upon order of creation: first created -> highest priority.
