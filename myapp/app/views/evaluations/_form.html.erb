@@ -11,41 +11,82 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :perspicuity %><br>
-    <%= f.number_field :perspicuity %>
-    <div class="btn-group btn-group-lg btn-gp" role="group">
-      <button type="button" class="btn btn-p1">1</button>
-      <button type="button" class="btn btn-p2">2</button>
-      <button type="button" class="btn btn-p3">3</button>
-      <button type="button" class="btn btn-p4">4</button>
-      <button type="button" class="btn btn-p5">5</button>
+  <div class="field row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6 right">
+      <span class="form-label">わかりやすさ&nbsp;</span>
+      <div style="display: none"><%= f.number_field :perspicuity %></div>
+      <div class="btn-group btn-group-lg" role="group">
+        <button type="button" class="btn btn-p1">1</button>
+        <button type="button" class="btn btn-p2">2</button>
+        <button type="button" class="btn btn-p3">3</button>
+        <button type="button" class="btn btn-p4">4</button>
+        <button type="button" class="btn btn-p5">5</button>
+      </div>
     </div>
   </div>
-  <div class="field">
-    <%= f.label :device %><br>
-    <%= f.number_field :device %>
-    <div class="btn-group btn-group-lg" role="group">
-      <button type="button" class="btn btn-p1">1</button>
-      <button type="button" class="btn btn-p2">2</button>
-      <button type="button" class="btn btn-p3">3</button>
-      <button type="button" class="btn btn-p4">4</button>
-      <button type="button" class="btn btn-p5">5</button>
+
+  <div class="field row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6 right">
+      <span class="form-label">工夫&nbsp;</span>
+      <div style="display: none"><%= f.number_field :device %></div>
+      <div class="btn-group btn-group-lg" role="group">
+        <button type="button" class="btn btn-d1">1</button>
+        <button type="button" class="btn btn-d2">2</button>
+        <button type="button" class="btn btn-d3">3</button>
+        <button type="button" class="btn btn-d4">4</button>
+        <button type="button" class="btn btn-d5">5</button>
+      </div>
     </div>
   </div>
-  <div class="field">
-    <%= f.label :voice %><br>
-    <%= f.number_field :voice %>
+
+  <div class="field row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6 right">
+      <span class="form-label">声&nbsp;</span>
+      <div style="display: none"><%= f.number_field :voice %></div>
+      <div class="btn-group btn-group-lg" role="group">
+        <button type="button" class="btn btn-v1">1</button>
+        <button type="button" class="btn btn-v2">2</button>
+        <button type="button" class="btn btn-v3">3</button>
+        <button type="button" class="btn btn-v4">4</button>
+        <button type="button" class="btn btn-v5">5</button>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :concern %><br>
-    <%= f.number_field :concern %>
+
+  <div class="field row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6 right">
+      <span class="form-label">気づかい&nbsp;</span>
+      <div style="display: none"><%= f.number_field :concern %></div>
+      <div class="btn-group btn-group-lg" role="group">
+        <button type="button" class="btn btn-c1">1</button>
+        <button type="button" class="btn btn-c2">2</button>
+        <button type="button" class="btn btn-c3">3</button>
+        <button type="button" class="btn btn-c4">4</button>
+        <button type="button" class="btn btn-c5">5</button>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :speed %><br>
-    <%= f.number_field :speed %>
+
+  <div class="field row">
+    <div class="col-xs-3"></div>
+    <div class="col-xs-6 right">
+      <span class="form-label">速度&nbsp;</span>
+      <div style="display: none"><%= f.number_field :speed %></div>
+      <div class="btn-group btn-group-lg" role="group">
+        <button type="button" class="btn btn-s1">1</button>
+        <button type="button" class="btn btn-s2">2</button>
+        <button type="button" class="btn btn-s3">3</button>
+        <button type="button" class="btn btn-s4">4</button>
+        <button type="button" class="btn btn-s5">5</button>
+      </div>
+    </div>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "送信", :class => "btn" %>
   </div>
 <% end %>
