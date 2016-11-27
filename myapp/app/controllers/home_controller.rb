@@ -14,6 +14,10 @@ class HomeController < ApplicationController
         @ev_voice = @ev_voice.round(2)
         @ev_concern = @ev_concern.round(2)
         @ev_speed = @ev_speed.round(2)
+
+      @comments = Comment.all
+
+      @comment = Comment.new
   end
   def about
   end
@@ -21,4 +25,3 @@ class HomeController < ApplicationController
   end
 
 end
-
