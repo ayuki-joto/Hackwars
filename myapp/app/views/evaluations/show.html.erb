@@ -25,5 +25,34 @@
   <%= @evaluation.speed %>
 </p>
 
+<canvas id="radar-chart" width="300" height="300"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script>
+  var radarChartData = {
+    labels: ["わかりやすさ", "工夫", "声", "気づかい", "速さ"],
+    datasets: [
+      {
+        label: "私",
+        fillColor : /*"#f2dae8"*/"rgba(242,218,232,0.6)",
+        strokeColor : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        pointColor : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        data : [<%= @ev_perspicuity %>,<%= @ev_device %>,<%= @ev_voice %>,<%= @ev_concern %>,<%= @ev_speed %>]
+      },
+    ]
+  };
+
+  window.onload = function(){
+    window.myRadar = new Chart(document.getElementById("radar-chart").getContext("2d")).Radar(radarChartData, {
+      responsive: true
+    });
+  }
+
+
+</script>
+
+
 <%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
 <%= link_to 'Back', evaluations_path %>
