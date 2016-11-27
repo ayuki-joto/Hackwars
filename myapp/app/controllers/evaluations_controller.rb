@@ -1,6 +1,6 @@
 class EvaluationsController < ApplicationController
   before_action :set_evaluation, only: [:show, :edit, :update, :destroy]
-
+  layout 'basic'
   # GET /evaluations
   # GET /evaluations.json
   def index

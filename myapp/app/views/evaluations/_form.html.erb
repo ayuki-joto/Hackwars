@@ -85,8 +85,15 @@
       </div>
     </div>
   </div>
+  <script>
+    $(function(){
+      $('#closebtn').on('click',function(){
+        parent.location.href = '/';
+      })
+    })
+  </script>
 
   <div class="actions">
-    <%= f.submit "送信", :class => "btn" %>
+    <%= f.submit "送信", :class => "btn", :id => "closebtn" %>
   </div>
 <% end %>
