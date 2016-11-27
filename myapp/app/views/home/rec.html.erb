@@ -1,47 +1,99 @@
 <% provide(:title, "録画授業") %>
 <head>
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-  <script type="text/javascript" src="https://skyway.io/dist/v2/0.3/peer.js"></script>
-  <script type="text/javascript" src="assets/videochat.js"></script>
 </head>
-<body>
-<h1>   </h1>
-<br>
-<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-7 content">
+      <div>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/BbLhT_KUxHY" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="col-xs-5 RadarChart">
+      <canvas id="radar-chart" width="300" height="300"></canvas>
+    </div>
+    <a class="btn btn-primary btn-lg active button" data-remodal-target="modal">Primary button</a>
+  </div>
+</div>
+<div class="remodal" data-remodal-id="modal" >
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <iframe height="450" width="700" src="../evaluations/new"></iframe></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 commentList">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
 
-<script >
+  </div>
+</div>
+<form>
+  <div class="form-group">
+    <label id="commentArea">Comment</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary submitbtn">送信</button>
+</form>
 
-  function del()
-  {
-
-    document.getElementById("disp").style.display="none";
-    var num =2;
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script>
+  var radarChartData = {
+    labels: ["わかりやすさ", "工夫", "声", "気づかい", "速さ"],
+    datasets: [
+      {
+        label: "私",
+        fillColor : /*"#f2dae8"*/"rgba(242,218,232,0.6)",
+        strokeColor : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        pointColor : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        data : [<%= @ev_perspicuity %>,<%= @ev_device %>,<%= @ev_voice %>,<%= @ev_concern %>,<%= @ev_speed %>]
+      },
+    ],
+  };
+  var options = {
+    scaleOverride: true,
+    scaleSteps: 5,
+    scaleStepWidth: 1,
+    scaleStartValue: 0
   }
 
-
+  window.onload = function(){
+    window.myRadar = new Chart(document.getElementById("radar-chart").getContext("2d")).Radar(
+        radarChartData,
+        options
+    );
+  }
 </script>
-<div id="disp" style="position:absolute; top:154px" >
-  <img src="assets/go.jpg" width="640" height="360" />
 
-</div>
-
-<div>
-       <span onClick="del()">
-        <video id="my-video" style="width: 640px; height: 360px;" autoplay></video>
-        <video id="peer-video" style="width: 600px;"  autoplay></video>
-        </span>
-</div>
-
-<div>
-  <p>MyID: <span id="my-id">-</span></p>
-  <p>PeerID: <span id="peer-id">-</span></p>
-</div>
-<div>
-  <input type="text" placeholder="PeerID" id="peer-id-input">
-  <button id="call-start">Start Call</button>
-  <button id="call-end">End Call</button>
-</div>
-</body>
-</html>
