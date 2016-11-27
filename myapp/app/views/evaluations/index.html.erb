@@ -2,34 +2,79 @@
 
 <h1>Listing Evaluations</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Perspicuity</th>
-      <th>Device</th>
-      <th>Voice</th>
-      <th>Concern</th>
-      <th>Speed</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+      <%= @ev_perspicuity %>
+      <%= @ev_device %>
+      <%= @ev_voice %>
+      <%= @ev_concern %>
+      <%= @ev_speed %></div>
+    <div class="col-sm-4"><canvas id="radar-chart" width="300" height="300"></canvas></div>
+  </div>
 
-  <tbody>
-    <% @evaluations.each do |evaluation| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= evaluation.perspicuity %></td>
-        <td><%= evaluation.device %></td>
-        <td><%= evaluation.voice %></td>
-        <td><%= evaluation.concern %></td>
-        <td><%= evaluation.speed %></td>
-        <td><%= link_to 'Show', evaluation %></td>
-        <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
-        <td><%= link_to 'Destroy', evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Perspicuity</th>
+        <th>Device</th>
+        <th>Voice</th>
+        <th>Concern</th>
+        <th>Speed</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @evaluations.each do |evaluation| %>
+        <tr>
+          <td><%= evaluation.perspicuity %></td>
+          <td><%= evaluation.device %></td>
+          <td><%= evaluation.voice %></td>
+          <td><%= evaluation.concern %></td>
+          <td><%= evaluation.speed %></td>
+          <td><%= link_to 'Show', evaluation %></td>
+          <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
+          <td><%= link_to 'Destroy', evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Evaluation', new_evaluation_path %>
+  <br>
+
+  <%= link_to 'New Evaluation', new_evaluation_path %>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script>
+  var radarChartData = {
+    labels: ["わかりやすさ", "工夫", "声", "気づかい", "速さ"],
+    datasets: [
+      {
+        label: "私",
+        fillColor : /*"#f2dae8"*/"rgba(242,218,232,0.6)",
+        strokeColor : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        pointColor : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        pointStrokeColor : "#fff",
+        pointHighlightFill : "#fff",
+        pointHighlightStroke : /*"#dd9cb4"*/"rgba(221,156,180,0.6)",
+        data : [<%= @ev_perspicuity %>,<%= @ev_device %>,<%= @ev_voice %>,<%= @ev_concern %>,<%= @ev_speed %>]
+      },
+    ],
+  };
+  var options = {
+    scaleOverride: true,
+    scaleSteps: 5,
+    scaleStepWidth: 1,
+    scaleStartValue: 0
+  }
+
+  window.onload = function(){
+    window.myRadar = new Chart(document.getElementById("radar-chart").getContext("2d")).Radar(
+      radarChartData,
+      options
+    );
+  }
+</script>
