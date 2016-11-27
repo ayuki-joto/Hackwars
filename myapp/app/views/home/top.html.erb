@@ -1,7 +1,32 @@
 <% provide(:title, "TOP") %>
+<head>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="https://skyway.io/dist/v2/0.3/peer.js"></script>
+  <script type="text/javascript" src="assets/videochat.js"></script>
+</head>
+<script >
+  function del()
+  {
+
+    document.getElementById("disp").style.display="none";
+    var num =2;
+
+
+  }
+</script>
 <div class="container">
   <div class="row">
-    <div class="col-xs-7 content">skyway</div>
+    <div class="col-xs-7 content">
+      <div id="disp" >
+        <img src="assets/go.jpg" width="640" height="360" />
+      </div>
+      <div>
+       <span onClick="del()">
+        <video id="my-video" autoplay></video>
+        <video id="peer-video" style="width: 600px;"  autoplay></video>
+        </span>
+      </div>
+    </div>
     <div class="col-xs-5 RadarChart">評価グラフ</div>
     <a class="btn btn-primary btn-lg active button" data-remodal-target="modal">Primary button</a>
   </div>

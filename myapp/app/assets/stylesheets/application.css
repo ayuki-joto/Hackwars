@@ -21,7 +21,7 @@
     width: 640px;
     text-align: center;
     height: 360px;
-    background: #cc0000;
+    background: #000000;
     margin-top: 30px;
 }
 
@@ -55,4 +55,15 @@
 
 .submitbtn {
     margin-left: 100px;
+}
+
+#my-video {
+    width: 780px;
+    height: 360px;
+    margin-left: -86px;
+}
+
+#disp {
+    position:absolute;
+    right: 0px;
 }
