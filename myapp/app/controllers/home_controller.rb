@@ -22,6 +22,11 @@ class HomeController < ApplicationController
   def about
   end
   def rec
+
+    @comments = Comment.all
+
+    @comment = Comment.new
+
   end
 
 end
