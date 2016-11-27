@@ -3,10 +3,12 @@
   <div class="row">
     <div class="col-xs-7 content">skyway</div>
     <div class="col-xs-5 RadarChart">評価グラフ</div>
-    <button type="button" class="btn btn-primary btn-lg active button">Primary button</button>
+    <a class="btn btn-primary btn-lg active button" data-remodal-target="modal">Primary button</a>
   </div>
 </div>
-
+<div class="remodal" data-remodal-id="modal" >
+  <button data-remodal-action="close" class="remodal-close"></button>
+  <iframe height="450" width="700" src="../evaluations/new"></iframe></div>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 commentList">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -46,7 +48,6 @@
 
   </div>
 </div>
-
 <form>
   <div class="form-group">
     <label id="commentArea">Comment</label>
