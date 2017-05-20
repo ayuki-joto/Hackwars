@@ -7,21 +7,25 @@
 <script >
   function del()
   {
-
-    document.getElementById("disp").style.display="none";
-    var num =2;
-
+      if (document.getElementById("disp").style.visibility==="hidden")
+      {
+          document.getElementById("disp").style.visibility="visible";
+      }
+      else
+      {
+          document.getElementById("disp").style.visibility="hidden";
+      }
 
   }
 </script>
 <div class="container">
   <div class="row">
     <div class="col-xs-7 content">
-      <div id="disp" >
-        <img src="assets/go.jpg" width="640" height="360" />
-      </div>
       <div>
        <span onClick="del()">
+         <u id="disp" >
+        <img src="assets/go.jpg" width="640" height="360" />
+        </u>
         <video id="my-video" autoplay></video>
         <video id="peer-video" style="width: 600px;"  autoplay></video>
         </span>
